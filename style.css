@@ -1,0 +1,122 @@
+body{
+  font-family: Arial, sans-serif;
+  background-color: rgba(27, 39, 41, 0.524);
+  color: rgb(242, 140, 8);
+  line-height: 1.6;
+    padding: 1rem;
+  }
+  .container {
+    overflow: hidden;
+    
+  }
+  .block {
+    width: 200px;     /* ширина блоков */
+    height: 70px;    /* высота блоков */
+    margin: 5px;
+    background-color: aquamarine;
+    border: 1px solid;
+    padding: 10px;
+  }
+  
+  .left {
+    float: left;
+  }
+  .right{
+    float: right
+  }
+  
+  /* 4 блок – выравниваем вправо */
+  .layout-4 {
+    justify-content: flex-end;
+  }
+  
+  .layout-4 .right-column {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  /* 5 блок – выравниваем влево */
+  .layout-5 {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  /* Общие стили */
+  .left-block {
+    width: 200px;
+    height: 130px;
+    background: aquamarine;
+    border: 1px solid;
+    padding: 10px;
+  }
+  
+  /* 4 блок настройки */
+  .layout-4 {
+    display: flex;
+    gap: 10px; /* отступ между большим и маленьким блоком */
+    align-items: center; /* выравниваем по вертикали */
+    padding: 10px;
+  }
+  
+  .layout-4 .left-block {
+    width: 196px;
+    height: 172px;
+    background: aquamarine;
+    border: 1px solid;
+    padding: 10px;
+  }
+  
+  .layout-4 .small-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .layout-4 .small-block {
+    width: 200px;
+    height: 70px;
+    background: aquamarine;
+    border: 1px solid;
+    padding: 10px;
+  }
+  
+  /* 5 блок настройки */
+  .layout-5 {
+    display: flex;
+    justify-content: center; /* центрируем вместе */
+    gap: 10px; /* отступ между большим и маленьким блоком */
+    align-items: center; /* выравниваем по вертикали */
+    
+  }
+  
+  .layout-5 .left-block {
+    width: 400px;
+    height: 170px;
+    background: aquamarine;
+    display: block;
+    margin: 0; /* убираем margin auto, теперь не нужен */
+    /* clear: both — не нужен, тк flex */
+    border: 1px solid;
+    padding: 10px;
+  }
+  
+  .layout-5 .small-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .layout-5 .small-block {
+    width: 200px;
+    height: 70px;
+    background: aquamarine;
+    border: 1px solid;
+    padding: 10px;
+  }
+
+  .layout-4 .layout-5 {
+ margin-bottom:10px; /* фиксированное одинаковое расстояние */
+  padding: 0; /* убираем лишний отступ */
+}
