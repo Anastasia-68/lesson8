@@ -1,122 +1,95 @@
-body{
+body {
   font-family: Arial, sans-serif;
   background-color: rgba(27, 39, 41, 0.524);
   color: rgb(242, 140, 8);
   line-height: 1.6;
-    padding: 1rem;
-  }
-  .container {
-    overflow: hidden;
-    
-  }
-  .block {
-    width: 200px;     /* ширина блоков */
-    height: 70px;    /* высота блоков */
-    margin: 5px;
-    background-color: aquamarine;
-    border: 1px solid;
-    padding: 10px;
-  }
-  
-  .left {
-    float: left;
-  }
-  .right{
-    float: right
-  }
-  
-  /* 4 блок – выравниваем вправо */
-  .layout-4 {
-    justify-content: flex-end;
-  }
-  
-  .layout-4 .right-column {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  
-  /* 5 блок – выравниваем влево */
-  .layout-5 {
-    justify-content: flex-start;
-    gap: 10px;
-  }
-  
-  /* Общие стили */
-  .left-block {
-    width: 200px;
-    height: 130px;
-    background: aquamarine;
-    border: 1px solid;
-    padding: 10px;
-  }
-  
-  /* 4 блок настройки */
-  .layout-4 {
-    display: flex;
-    gap: 10px; /* отступ между большим и маленьким блоком */
-    align-items: center; /* выравниваем по вертикали */
-    padding: 10px;
-  }
-  
-  .layout-4 .left-block {
-    width: 196px;
-    height: 172px;
-    background: aquamarine;
-    border: 1px solid;
-    padding: 10px;
-  }
-  
-  .layout-4 .small-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .layout-4 .small-block {
-    width: 200px;
-    height: 70px;
-    background: aquamarine;
-    border: 1px solid;
-    padding: 10px;
-  }
-  
-  /* 5 блок настройки */
-  .layout-5 {
-    display: flex;
-    justify-content: center; /* центрируем вместе */
-    gap: 10px; /* отступ между большим и маленьким блоком */
-    align-items: center; /* выравниваем по вертикали */
-    
-  }
-  
-  .layout-5 .left-block {
-    width: 400px;
-    height: 170px;
-    background: aquamarine;
-    display: block;
-    margin: 0; /* убираем margin auto, теперь не нужен */
-    /* clear: both — не нужен, тк flex */
-    border: 1px solid;
-    padding: 10px;
-  }
-  
-  .layout-5 .small-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .layout-5 .small-block {
-    width: 200px;
-    height: 70px;
-    background: aquamarine;
-    border: 1px solid;
-    padding: 10px;
-  }
+  padding: 1rem;
+}
 
-  .layout-4 .layout-5 {
- margin-bottom:10px; /* фиксированное одинаковое расстояние */
-  padding: 0; /* убираем лишний отступ */
+.container {
+  overflow: hidden;
+}
+
+/* Общие стили блоков */
+.block {
+  width: 200px;
+  height: 70px;
+  margin: 5px;
+  background-color: aquamarine;
+  border: 1px solid;
+  padding: 10px;
+  float: left; 
+  box-sizing: border-box;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+/* Общие стили */
+.left-block, .small-block {
+  background: aquamarine;
+  border: 1px solid;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.layout-4 {
+  overflow: hidden;
+  padding: 10px;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.layout-4 .left-block {
+  width: 200px;
+  height: 150px;
+  float: left;
+  margin-right: 10px;
+}
+
+.layout-4 .right-column {
+  float: left;
+}
+
+.layout-4 .small-block {
+  width: 200px;
+  height: 70px;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.layout-5 {
+  width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+/* Большой блок в layout-5 */
+.layout-5 .left-block {
+  width: 400px;
+  height: 150px;
+  float: left;
+  margin-right: 10px;
+}
+
+.layout-5 .small-column {
+  float: left;
+  display: block;
+}
+
+.layout-5 .small-block {
+  width: 200px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+/* Последний маленький блок без отступа */
+.layout-5 .small-block:last-child {
+  margin-bottom: 0;
 }
